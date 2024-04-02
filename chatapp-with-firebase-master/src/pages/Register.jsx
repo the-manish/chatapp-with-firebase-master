@@ -48,9 +48,11 @@ const Register = () => {
                         email,
                         photoURL: downloadURL,
                     });
+                    await setDoc (doc(db,"userChats",res.user.uid),{});
+                      // Redirect user to home page after successful registration
+                      navigateTo('/');
                 });
-                    // Redirect user to home page after successful registration
-                    navigateTo('/');
+                   
                 }
             );
         } catch (err) {
