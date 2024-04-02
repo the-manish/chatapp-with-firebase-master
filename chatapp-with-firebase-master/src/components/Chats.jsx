@@ -24,9 +24,9 @@ const Chats = () => {
         currentUser.uid && getChats();
     }, [currentUser.uid]);
 
-    // const handleSelect = (u) => {
-    //     dispatch({ type: "CHANGE_USER", payload: u });
-    // };
+    const handleSelect = (u) => {
+        dispatch({ type: "CHANGE_USER", payload: u });
+     };
 
     return (
         <div className="chats">
